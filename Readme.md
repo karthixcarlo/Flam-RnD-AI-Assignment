@@ -68,7 +68,7 @@ Together, these values accurately replicate the original dataset and maintain ph
 
 ---
 
-## 🧩 Final Fitted Equation (Submission Format)
+## 🧩 Final Fitted Equation 
 
 \[
 \left(

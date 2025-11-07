@@ -1,0 +1,26 @@
+# Flam R&D AI Assignment Results
+name: "Parametric Curve Fitting - Flam R&D AI Assignment"
+author: "Karthigai Selvam R"
+institution: "Amrita Vishwa Vidyapeetham, Coimbatore"
+dataset: "xy_data.csv"
+
+equations:
+  x(t): "t*cos(0.5236177) - exp(0.0300005039*abs(t))*sin(0.3*t)*sin(0.5236177) + 55.00333601"
+  y(t): "42 + t*sin(0.5236177) + exp(0.0300005039*abs(t))*sin(0.3*t)*cos(0.5236177)"
+
+variables:
+  theta: 0.5236177
+  M: 0.0300005039
+  X: 55.00333601
+
+metrics:
+  L1_Total: 5.5507
+  L1_Mean: 0.0037
+
+visualization:
+  desmos_link: "https://www.desmos.com/calculator/tuoaqajmtc"
+
+notes:
+  - The parameters were determined via numerical L1 minimization.
+  - The Desmos plot confirms near-perfect overlap between dataset and curve.
+  - Results verified manually and quantitatively.

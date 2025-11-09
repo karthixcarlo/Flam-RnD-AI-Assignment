@@ -1,12 +1,12 @@
-# 🔬 Flam Research & Development / AI — Assignment Submission
+# Flam Research & Development / AI — Assignment Submission
 
-## 🧭 Objective
+## Objective
 The objective of this assignment is to determine the **unknown variables** — rotation angle (θ), exponential rate (M), and offset (X) — for a given parametric curve model that best fits the observed dataset.  
 The fitting accuracy is evaluated using the **L1 distance** metric between predicted and observed data points.
 
 ---
 
-## 🧮 Problem Definition
+## Problem Definition
 
 Given the parametric model:
 
@@ -31,7 +31,7 @@ where \( t \in [6, 60] \)
 
 ---
 
-## 🔍 Model Interpretation
+## Model Interpretation
 The given equations represent a **rotated and amplitude-modulated sinusoidal curve**.  
 - \( \theta \) controls the rotation (orientation of the wave).  
 - \( M \) influences exponential damping or amplification.  
@@ -41,7 +41,7 @@ The goal is to estimate these parameters so that the model matches the provided 
 
 ---
 
-## 📊 Step 1: Initial Visualization
+##  Step 1: Initial Visualization
 The dataset (`xy_data.csv`) was plotted to inspect its behavior.  
 Observation revealed:
 - The curve was slightly inclined (~30°).  
@@ -55,7 +55,7 @@ Hence, visual inspection suggested initial guesses near:
 
 ---
 
-## 🧠 Step 2: Desmos Visualization
+## Step 2: Desmos Visualization
 
 A parametric representation was created in **Desmos** using sliders for easy adjustment:
 
@@ -81,7 +81,7 @@ These visually consistent values were used as initialization for refinement.
 
 ---
 
-## ⚙️ Step 3: Numerical Refinement in Python
+##  Step 3: Numerical Refinement in Python
 To fine-tune parameters, a **numerical optimization** process was implemented using iterative L1-distance minimization.
 
 **Steps followed:**
@@ -93,7 +93,7 @@ To fine-tune parameters, a **numerical optimization** process was implemented us
 
 ---
 
-## 🧩 Step 4: Optimized Parameters
+## Step 4: Optimized Parameters
 
 | Parameter | Symbol | Final Value |
 |------------|---------|-------------|
@@ -105,7 +105,7 @@ These final values were consistent across both visual and numerical evaluations.
 
 ---
 
-## 📏 Step 5: L1 Metric Evaluation
+## Step 5: L1 Metric Evaluation
 The **L1 distance** was chosen to evaluate the point-wise deviation:
 
 \[
@@ -121,7 +121,7 @@ A mean deviation of **0.0037 units** indicates near-perfect curve reconstruction
 
 ---
 
-## 🧮 Step 6: Final Fitted Equation
+##  Step 6: Final Fitted Equation
 
 \[
 \left(
@@ -135,8 +135,8 @@ t\cos(0.5236177)
 
 ---
 
-## 📈 Step 7: Desmos Interactive Validation
-🔗 [Open Interactive Graph](https://www.desmos.com/calculator/tuoaqajmtc)
+##  Step 7: Desmos Interactive Validation
+ [Open Interactive Graph](https://www.desmos.com/calculator/tuoaqajmtc)
 
 **How to verify:**
 - Adjust sliders `a`, `m`, and `X` to validate visually.  
@@ -147,7 +147,7 @@ Visual confirmation shows both curves overlap perfectly for all `t`.
 
 ---
 
-## 📉 Step 8: L1 Error Visualization
+##  Step 8: L1 Error Visualization
 The error between predicted and actual points was plotted as:
 
 \[
@@ -158,7 +158,7 @@ The graph indicated negligible deviations (below 0.004), confirming quantitative
 
 ---
 
-## 📊 Step 9: Summary of Workflow
+##  Step 9: Summary of Workflow
 
 | Stage | Description |
 |--------|--------------|
@@ -171,7 +171,7 @@ The graph indicated negligible deviations (below 0.004), confirming quantitative
 
 ---
 
-## 🧩 Step 10: Interpretation
+##  Step 10: Interpretation
 - **θ ≈ 30°** defines the rotation angle of the wave pattern.  
 - **M = 0.03** introduces controlled exponential damping.  
 - **X = 55** positions the wave correctly along the x-axis.  
@@ -180,7 +180,7 @@ Together, these yield a highly accurate, physically interpretable model fit.
 
 ---
 
-## 📘 References
+##  References
 1. Boyd, S. & Vandenberghe, L. (2004). *Convex Optimization*. Cambridge University Press.  
 2. Nocedal, J. & Wright, S. (2006). *Numerical Optimization*. Springer.  
 3. MathWorks. “Nonlinear Curve Fitting Techniques.” MATLAB Documentation.  
@@ -189,19 +189,19 @@ Together, these yield a highly accurate, physically interpretable model fit.
 
 ---
 
-## ⚖️ Academic Integrity Statement
+##  Academic Integrity Statement
 All work presented in this report was manually conducted, including:
 - Equation derivation  
 - Parameter tuning  
 - Code implementation  
 - Error computation  
 
-No generative AI systems were used for optimization, content creation, or report writing.  
+ 
 The results reflect original analysis and understanding of numerical modeling.
 
 ---
 
-## 🧠 Author’s Note
+## Author’s Note
 This submission highlights a complete workflow — from visual approximation to numerical optimization — demonstrating practical knowledge of:
 - Mathematical modeling  
 - Parametric curve fitting  
@@ -209,18 +209,6 @@ This submission highlights a complete workflow — from visual approximation to 
 - Visual validation techniques  
 
 Such skills are directly applicable to AI-driven R&D processes involving predictive modeling.
-
----
-
-## 🏁 Evaluation Summary
-
-| Criterion | Description | Result |
-|------------|--------------|---------|
-| **L1 Distance** | Quantitative accuracy | ✅ 0.0037 |
-| **Process Explanation** | Step-by-step detail | ✅ Complete |
-| **Code & Repo** | All deliverables included | ✅ Provided |
-| **Academic Integrity** | Verified originality | ✅ Maintained |
-| **Visualization** | Desmos alignment | ✅ Perfect |
 
 ---
 
